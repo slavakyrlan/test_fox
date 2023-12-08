@@ -20,4 +20,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(str(cat), 'Сущность: Сугроб')
         self.assertEqual(str(employee), 'Петя работает в Foxford')
 
-
+    def test_difference(self):
+        employee1 = Employee("Петя", 'горе')
+        employee2 = Employee("Вася", 'долина')
+        self.assertNotEqual(str(employee1), str(employee2))
